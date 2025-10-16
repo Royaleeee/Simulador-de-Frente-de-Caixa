@@ -5,9 +5,10 @@ public class FinalizarCompra {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int clienteCadastrado, cpf = 0, quantidade, codigoProduto, formaPagamento;
+        int clienteCadastrado, quantidade, codigoProduto, formaPagamento;
         double ps5 = 2999.99, xboxSeriesX = 1999.99, nintendoSwitch = 3999.99, total = 0.0, limiteCredito = 0.0, debito = 0.0, pix = debito, valorDinheiro = 0.0;
-
+        long cpf = 0;
+        
         while (true) { // Loop principal para verificar se o cliente é cadastrado
             System.out.println("Cliente tem cadastro na loja?");
             System.out.println("1 - Sim");
@@ -16,7 +17,7 @@ public class FinalizarCompra {
 
             if (clienteCadastrado == 1) {
                 System.out.println("Digite o CPF do cliente cadastrado:");
-                cpf = scan.nextInt();
+                cpf = scan.nextLong();
                 limiteCredito = 20000.00;
                 debito = 10000.00;
                 
@@ -145,3 +146,4 @@ public class FinalizarCompra {
         }
     }
 }
+
